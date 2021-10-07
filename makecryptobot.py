@@ -42,7 +42,12 @@ while True:
     frame = createframe(msg,i)
     frame.to_sql(trades[0],engine,if_exists='append',index=False)
     if isSame == False:
-        print(frame)
+         print(i,frame)
+    if i == 100:
+        for m in range(len(takeTrade)):
+            plt.plot(takeTrade[i])
+        plt.show()
+        return False
     
     
  
