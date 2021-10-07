@@ -8,6 +8,7 @@ import pandas as pd
 import sqlalchemy
 from binance.client import Client
 from binance import BinanceSocketManager
+import matplotlib.pyplot as plt
 trades = ['BTCUSDT','FTTUSDT','ADAUSDT']
 takeTrade = []
 api_key = 'Binance_APIKEY'
