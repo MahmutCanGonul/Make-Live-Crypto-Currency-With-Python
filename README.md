@@ -14,3 +14,4 @@ Using with Jupyter making live crypto currency action
 OUTPUT:
 ![LiveCryptoBTC](https://user-images.githubusercontent.com/75094927/136405314-32b05fe4-d9f6-4c7d-af90-7ebafb030aea.png)
 
+![graphic](https://user-images.githubusercontent.com/75094927/136416172-8340cfca-8d1d-458f-b38d-ea6b6fc30b25.png)
