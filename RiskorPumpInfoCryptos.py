@@ -36,15 +36,14 @@ elif choice == 7:
 print("Checking...")
 
 def get_crypto_Price(coin,currency):
-    return cryptocompare.get_price(coin,currency)[coin][currency]
+    return cryptocompare.get_price(coin,currency)[coin][currency] """Return avaliable price coin"""
 
 
 def get_crypto_name(coin):
-    return cryptocompare.get_coin_list()[coin]['FullName']
+    return cryptocompare.get_coin_list()[coin]['FullName'] """Return cain name """
 
-price = []
+ 
 price_2 = []
-times = []
 times_2 = []
 riskindex = []
 incordec=0
@@ -54,8 +53,8 @@ whenRiskTime=0
 whenHugeRiskTime=0
 
 def Table(value):
-    price_2.append(get_crypto_Price(crypto,currency))
-    if len(price_2) > 1:
+    price_2.append(get_crypto_Price(crypto,currency)) """We added avaliable price on price_2 array"""
+    if len(price_2) > 1: 
         for i in range(len(price_2)):
             if price_2[i] > price_2[i-1]:
                 value+=1
@@ -79,13 +78,13 @@ def Table(value):
            
 
         
-while(count !=500):
+while(count !=500): """How many time calculate risk situation on crypto if you enter high number like: count != 1000 time will be increase but you can see better risk result"""
     count+=1
     Table(0)
 
 lastprice = price_2[len(price_2)-1]
 
-price_2.sort()
+price_2.sort()"""With this part  we sorting all avaliable price for example price_2[0] is  low price and price_2[len(price_2)-1] is high price"""
 for i in range(len(riskindex)):
     if riskindex[i] == 'Has Risk' and isHugeRisk == False:
         print("There is a risk at ",get_crypto_name(crypto)," Time: ",times_2[whenRiskTime-1]) 
